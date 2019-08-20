@@ -1,0 +1,59 @@
+ <nav class="navbar navbar-toggleable navbar-expand-lg navbar-light bg-faded">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+            <img src="\./images/mattel-logo.png" alt="mattel logo">
+        </a>
+         <span class="navbar-brandname">
+            <a href="/">Product Info Exchange</a>
+        </span>
+        <div class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav">
+                <li class="nav-item brandname-fp dropdown-list {{#ifEquals displayBrandName 'FisherPriceBrands'}} active {{/ifEquals}}" data-brand-name="FisherPriceBrands" data-sub-brand-name="FISHER-PRICE BRANDS">
+                    <a href="/brands/FisherPriceBrands">
+                        <span>Fisher-Price Brands</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="container">
+                            <h3 class="d-none d-md-block">FP BRANDS SITES</h3>
+                            <ul class="submenu-carousel"></ul>
+                         </div>
+                    </div>
+                </li>
+                <li class="nav-item brandname-fpfriends dropdown-list {{#ifEquals displayBrandName 'FisherPriceFriends'}} active {{/ifEquals}}" data-brand-name="FisherPriceFriends" data-sub-brand-name="FP LICENSNG">
+                    <a href="/brands/FisherPriceFriends"><span>Fisher-Price Friends</span></a>
+                    <div class="dropdown-menu">
+                        <div class="container">
+                            <h3 class="d-none d-md-block">FP FRIENDS SITES</h3>
+                            <ul class="submenu-carousel"></ul>
+                         </div>
+                    </div>
+                </li>
+                <li class="nav-item brandname-mattelboys dropdown-list {{#ifEquals displayBrandName 'MattelBoys'}} active {{/ifEquals}}" data-brand-name="MattelBoys" data-sub-brand-name="BOYS">
+                    <a href="/brands/MattelBoys"><span>Mattel Boys</span></a>
+                    <div class="dropdown-menu">
+                        <div class="container">
+                            <h3 class="d-none d-md-block">BOYS SITES</h3>
+                            <ul class="submenu-carousel"></ul>
+                         </div>
+                    </div>
+                </li>
+                <li class="nav-item brandname-mattelgirls dropdown-list {{#ifEquals displayBrandName 'MattelGirls'}} active {{/ifEquals}}" data-brand-name="MattelGirls" data-sub-brand-name="GIRLS">
+                    <a href="/brands/MattelGirls"><span>Mattel Girls</span></a>
+                    <div class="dropdown-menu">
+                        <div class="container">
+                            <h3 class="d-none d-md-block">GIRLS SITES</h3>
+                            <ul class="submenu-carousel"></ul>
+                         </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="float-md-right user-details">
+            <div>Welcome <span>{{displayName.name}}</span></div>
+            {{!-- <a href="/logout" class="user-logout">Logout</a> --}}
+        </div>
+    </div>
+</nav>

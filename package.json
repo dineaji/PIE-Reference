@@ -1,0 +1,50 @@
+{
+  "name": "pie.mattel.com",
+  "version": "1.0.0",
+  "description": "PIE application to search archives",
+  "main": "server.js",
+  "scripts": {
+    "start": "SET NODE_ENV=dev && node server.js",
+    "test": "mocha \"./**/*.test.js*\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://https://github.com/mattel-dig/pie-pdm.git"
+  },
+  "author": "Kamalakannan Chennappan",
+  "license": "ISC",
+  "dependencies": {
+    "activedirectory": "^0.7.2",
+    "bluebird": "^3.5.1",
+    "cache-manager": "^2.7.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "hbs": "^4.0.1",
+    "lodash": "^4.17.4",
+    "mongoose": "^5.0.5",
+    "mssql": "^4.1.0",
+    "passport": "^0.4.0",
+    "passport-ldapauth": "^2.0.0",
+    "passport-windowsauth": "^3.0.0",
+    "path": "^0.12.7",
+    "tedious": "^2.2.4",
+    "uuid": "^3.2.1",
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^1.7.2"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "gulp": "^3.9.1",
+    "mocha": "^5.0.0",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "chai-webdriver": "^1.2.0",
+    "tap": "^11.1.1"
+  }
+}

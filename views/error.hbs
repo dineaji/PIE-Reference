@@ -1,0 +1,11 @@
+<div class="container">
+  {{#if error_messages}}
+    {{#each error_messages}}
+      <div class="alert alert-danger">
+        {{{error.message}}}
+      </div>
+    {{/each}}
+    {{else}}
+	<div class="alert alert-danger">please try again..</div>
+  {{/if}}
+</div>

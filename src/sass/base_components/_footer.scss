@@ -1,0 +1,28 @@
+.footer{
+    z-index:0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding-top:15px;
+    background: none;
+    font-family: 'calibri';
+    font-size: 14px; 
+    color: #9b9b9b;
+    border-top: 1px solid #b1b9bc;
+    // background: #e5f3f5;
+    background: #ecf4f6;
+    .container{
+      z-index: 3;
+        position: relative;
+    }
+   .opacityLayer{
+    opacity:0.8;
+    background: #f2f8f8;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;  
+  }
+}

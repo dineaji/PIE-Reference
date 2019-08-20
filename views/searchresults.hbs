@@ -1,0 +1,38 @@
+<div class="container search-result-wrapper main-content">
+  <div class="filter-info-bar hidden-xs-up" >
+    <span id="filter-total-results"></span> <span class="result-label">result</span> for 
+    <span id="filter-info-list" class="font-weight-bold"></span></div>
+  <table class="table table-striped">
+    <thead class="thead-inverse">
+      <tr>
+        <th align="center">Project</th>
+        <th>Project Description</th>
+        <th align="center">Project Status</th>
+        <th align="center">Product Number</th>
+        <th>Product Description</th>
+        <th align="center">Year</th>
+        <th>Team</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody id="search-result-table"></tbody>
+  </table>
+  <div class="btn-group d-none" id="show-n-rows-container">
+    <label>Show 
+      <select size="1" name="" aria-controls="" class="input-sm" id="show-n-rows">
+        <option value="10" selected="selected">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select> Rows
+    </label>
+  </div>
+  <div class="d-inline">
+    <nav aria-label="Page navigation" class="float-right">
+      <ul class="pagination" id="pagination">
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<script type="text/javascript" src='\./js/templates/searchResults.tmpl.js'></script>

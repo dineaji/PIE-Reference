@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-data": "*",
+    "gulp-directory-sync": "*",
+    "gulp-modulizr": "*",
+    "gulp-notify": "*",
+    "gulp-nunjucks-html": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*"
+  }
+}

@@ -1,0 +1,127 @@
+#page-container{
+    // .search-result-wrapper{
+    //     background-color: #fff;
+    //     padding: 1em;
+    //     border-radius: 20px;
+    //     margin-bottom: 3em;
+    // }
+    table{
+        position: relative;
+        th{
+            background-color: #2690cc;
+            vertical-align: middle;
+            padding: .6em .75em;
+            // text-align: center;
+            font-weight: bold;
+        }
+        #search-result-table,#search-detail-container{
+            border: 1px solid #2690cc;
+            &:empty,
+            &.loading{
+                border: none;
+                height: 400px;
+                display: block;
+                &:after{
+                    content :"";
+                    background: url('#{$assetPath}/loading-icon.gif') no-repeat center center;
+                    background-size: 100px 100px;
+                    position: absolute;
+                    width: 100%;
+                    height: calc( 100% - 38px );
+                    border: 1px solid #2690cc;
+                }
+            }
+            &.loading{
+                display: table-row-group;
+                &:after{
+                    background-color: rgba(255, 255, 255,.8);
+                    top: 38px;
+                }
+            }
+            &.empty-container,
+            &.error-container{
+                border: none;
+                height: 400px;
+                display: block;
+                &:after{
+                    content: "No Data Found..";
+                    background: none;
+                    position: absolute;
+                    width: 100%;
+                    height: calc(100% - 38px);
+                    border: 1px solid #2690cc;
+                    left: 0;
+                    text-align: center;
+                    line-height: 400px;
+                    font-weight: bold;
+                }
+            }
+            &.error-container:after{
+                content: "please try again..";   
+            }
+            td{
+                max-width: 200px;
+                // text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+#search-result-table{
+            border: 1px solid #2690cc;
+            &:empty,
+            &.loading{
+                border: none;
+                height: 400px;
+                display: block;
+                &:after{
+                    content :"";
+                    background: url('#{$assetPath}/loading-icon.gif') no-repeat center center;
+                    background-size: 100px 100px;
+                    position: absolute;
+                    width: 100%;
+                    height: calc( 100% - 38px );
+                    border: 1px solid #2690cc;
+                }
+            }
+            &.loading{
+                display: table-row-group;
+                &:after{
+                    background-color: rgba(255, 255, 255,.8);
+                    top: 38px;
+                }
+            }
+            &.empty-container,
+            &.error-container{
+                border: none;
+                height: 400px;
+                display: block;
+                &:after{
+                    content: "No Data Found..";
+                    background: none;
+                    position: absolute;
+                    width: 100%;
+                    height: calc(100% - 38px);
+                    border: 1px solid #2690cc;
+                    left: 0;
+                    text-align: center;
+                    line-height: 400px;
+                    font-weight: bold;
+                }
+            }
+            &.error-container:after{
+                content: "please try again..";   
+            }
+            td{
+                max-width: 200px;
+                // text-align: center;
+                font-size: 14px;
+            }
+        }
+    #external-links{
+        td img{
+            vertical-align: bottom;
+            padding-right: 10px;
+
+        }
+    }

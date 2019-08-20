@@ -1,0 +1,26 @@
+<div class="container">
+    <nav class="breadcrumb">
+        <ul>
+            <li>
+                <div class="arrow-end" data-attribute=0></div>
+                <div class="breadcrumb-list home-link">
+                    <a href='/'>Search</a>
+                </div>
+                <div class="arrow-right"></div>
+            </li>
+             {{#each breadcrumbs}}
+                {{# if this.breadcrumbName}}
+                    <li>
+                        <div class="arrow-end" data-attribute={{@key}}></div>
+                        <div class="breadcrumb-list home-link">
+                            <a href={{this.breadcrumbUrl}}>{{this.breadcrumbName}}</a>
+                        </div>
+                        <div class="arrow-right"></div>
+                    </li>
+                    {{/if}}
+                {{!-- <a href=></a> --}}
+            {{/each}}
+            
+        </ul>
+    </nav>
+</div>

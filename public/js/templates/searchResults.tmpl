@@ -1,0 +1,23 @@
+{{#each items}}
+    <tr>
+        {{#isProjectAlreadyBinded this.projectNumber}}
+            <td align="center"><a href="{{../baseHref}}/{{this.projectNumber}}">{{this.projectNumber}}</a></td>
+            <td>{{this.projectDescription}}</td>
+            <td align="center">{{this.projectStatus}}</td>
+            <td align="center" style="font-weight:bold;">{{#if this.toynumber}} {{this.toynumber}} {{else}} {{this.primarytoynumber}}{{/if}}</td>
+            <td>{{this.productDescription}}</td>
+            <td align="center">{{this.projectYear}}</td>
+            <td>{{this.team}}</td>
+            <td>{{this.category}}</td>
+        {{else}}
+            <td></td>
+            <td></td>
+            <td></td>
+            <td align="center">{{#if this.toynumber}} {{this.toynumber}} {{else}} {{this.primarytoynumber}}{{/if}}</td>
+            <td>{{this.productDescription}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        {{/isProjectAlreadyBinded}}
+    </tr>
+{{/each}}

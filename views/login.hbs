@@ -1,0 +1,36 @@
+<div class="container">
+  <form action="/login" method="post">
+    <div class="container">
+      {{#if error_messages}}
+      {{#each error_messages}}
+        <div class="alert alert-danger">
+          {{error.message}}
+        </div>
+        {{/each}}
+      {{/if}}
+      <label for="uname">
+        <b>Username</b>
+      </label>
+      <input type="text" placeholder="Enter Username" name="username" autofocus required>
+
+      <label for="psw">
+        <b>Password</b>
+      </label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <script type="text/javascript">
+      setTimeout(function() {
+        $('input[name="username"]').focus()
+      }, 100);
+      // $(document).ready(function() {
+      //   $('input[name="username"]').focus();
+      // });
+    </script>
+  </form>
+</div>

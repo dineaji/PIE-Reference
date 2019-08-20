@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="content-wrapper">
+      <form role="form" action="/searchresults" method="POST" id="search-result-submit">
+          <div class="col-md-6">
+              <div class="form-group required">
+                  <label class="col-sm-5 control-label" for="selectBrandName">Select Brand</label>
+                  <div class="col-sm-7">
+                      <select name="brand" class="form-control" id="selectBrandName" required>
+                      <option value="" selected>Choose Brand Name</option>
+                      <option value="FisherPriceBrands">Fisher-Price Brands</option>
+                      <option value="FisherPriceFriends">Fisher-Price Friends</option>
+                      <option value="MattelBoys">Mattel Boys</option>
+                      <option value="MattelGirls">Mattel Girls</option>
+                      </select>
+                  </div>
+              </div>
+              <div id="search-form-wrapper"></div>
+              <div class="form-group">
+                  <div class="col-sm-12 text-center">
+                      <input type="submit" value="Search" class="btn btn btn-primary search-btn" id="submit-search-results">
+                  </div>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+<script type="text/javascript" src='\./js/templates/searchFilterInputFields.tmpl.js'></script>

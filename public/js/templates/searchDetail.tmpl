@@ -1,0 +1,178 @@
+<div id="product-attributes">
+    <h2>Product Attributes</h2>
+    <div class="attributes-container">
+        <ul class="attributes-lists">
+            <li class="key-value-pair">
+                <span class="key">Asst/Toy</span>
+                <span class="value">
+                {{#if productAttributes.assortmentNumber}} 
+                   {{productAttributes.assortmentNumber}} <span>/</span>
+                {{/if}}
+                {{productAttributes.productNumber}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Description</span>
+                <span class="value">{{productAttributes.productDescription}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Product Type</span>
+                <span class="value">{{productAttributes.productType}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Legal Approved</span>
+                {{#if productAttributes.teamProductLegal}}
+                <span class="value">Yes</span>
+                {{else}}
+                <span class="value">No</span>
+                {{/if}}
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Dash Code</span>
+                <span class="value">{{productAttributes.dashCode}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">MFG Classic</span>
+                <span class="value">{{productAttributes.mfgClassification}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Eng Type</span>
+                <span class="value">{{productAttributes.engineeringType}}</span>
+            </li>
+        </ul>
+        <ul class="attributes-lists">
+            <li class="key-value-pair">
+                <span class="key">Product Complexity</span>
+                <span class="value">{{productAttributes.projectComplexity}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Project Year</span>
+                <span class="value">{{productAttributes.projectYear}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Project Number</span>
+                <span class="value">{{productAttributes.projectNumber}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Project Status</span>
+                <span class="value">{{productAttributes.projectStatus}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Project Priority</span>
+                <span class="value">{{productAttributes.projectPriority}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Slot #</span>
+                <span class="value">{{productAttributes.slotNumber}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">Drop Date</span>
+                <span class="value">{{productAttributes.dropDate}}</span>
+            </li>
+        </ul>
+        <ul class="attributes-lists">
+            <li class="key-value-pair">
+                <span class="key">GRS L1</span>
+                <span class="value">{{productAttributes.grsl1}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">GRS L2</span>
+                <span class="value">{{productAttributes.grsl2}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">GRS L3</span>
+                <span class="value">{{productAttributes.grsl3}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">GRS L4</span>
+                <span class="value">{{productAttributes.grsl4}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">GRS L5</span>
+                <span class="value">{{productAttributes.grsl5}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">GRS L6</span>
+                <span class="value">{{productAttributes.grsl6}}</span>
+            </li>
+            <li class="key-value-pair">
+                <span class="key">GRS L7</span>
+                <span class="value">{{productAttributes.grsl7}}</span>
+            </li>
+        </ul>
+       <div class="key-value-pair">
+            <span class="key">Sub/Team/Cat</span>
+            <span class="value">{{productAttributes.subbrand}} / {{productAttributes.team}} / {{productAttributes.category}}</span>
+        </div>
+    </div>
+</div>
+<div id="pie-documents">
+    <h2>PIE Documents</h2>
+    <a href="javascript:void(0)" class="toggle-accordion" accordion-id="#documents-container"></a>
+    <div class="documents-container row" id="documents-container">
+        {{#each productDocuments as |item|}}
+            {{#ifCond '==||' @index 0 @index ../this/productDocsSecondHalf}}
+            <div class="col-md-6">  
+            {{/ifCond}}   
+                    
+            <div class="card">
+                <div class="card-header" role="tab">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" href="#collapse{{@index}}" aria-expanded="{{#if @first}}true{{else}}false{{/if}}" aria-controls="collapse{{@index}}">
+                            <span class="accordion-icon"></span>
+                            {{@key}}
+                        </a>
+                    </h5>
+                </div>
+                
+                <div id="collapse{{@index}}" class="collapse {{#if @first}}show{{/if}}" role="tabpanel">
+                    <ul class="card-block">
+                        {{#each item as | docs |}}
+                            <li>
+                            {{#if docs.[0].libraryVal}}
+                            <a href="{{docs.[0].libraryVal}}" target="_blank">{{@key}}</a>
+                            {{else}}
+                            {{@key}}
+                            {{/if}}
+                                <ul {{#if docs.[1]}} class="document-lists" {{/if}}>
+                                {{#each docs as | doc |}}
+                                    {{#if doc.title}}
+                                        <li><a target="_blank" class="{{titleFormat doc.title}}" href="//pie2vault/{{doc.value}}">{{doc.title}}</a> <span>{{doc.lstupdt_date}}</span></li>
+                                    {{/if}}
+                                {{/each}}</ul>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            {{#ifCond '==||' @index ../this/productDocsHalf @index ../this/productDocsSecondHalfEnd}}
+            </div>               
+            {{/ifCond}} 
+        {{/each}}
+    </div>
+</div>
+
+<div id="external-links">
+    <h2>External Links</h2>
+    <table class="table table-striped" style="border: 1px solid #eceeef;">
+        <tbody>
+            <tr>
+                <td>
+                    <a href="http://gcs/Reports/ProjectReports/ProjectOnePageReport.aspx?Project={{productAttributes.projectNumber}}&noteProject=Project&noteNextsteps=NextSteps&notePlant=Plant&noteQA=QA" target="_blank">
+                        <img src="\./images/externallink.png" alt=""> One-Page Report</a> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://gcs/Reports/ProjectReports/MfgTwoPageReport.aspx?Project={{productAttributes.projectNumber}}&noteProject=Project&noteSchedule=Schedule&noteNextsteps=NextSteps&notePlant=Plant&noteQA=QA" target="_blank">
+                        <img src="\./images/externallink.png" alt=""> Mfg Two Page</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://gcs/Reports/scheduledetail.aspx?Project={{productAttributes.projectNumber}}" target="_blank">
+                        <img src="\./images/externallink.png" alt=""> Full Schedule </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

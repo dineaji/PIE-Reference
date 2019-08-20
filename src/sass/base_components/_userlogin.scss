@@ -1,0 +1,21 @@
+.user-details{
+	margin-left: auto;
+	max-width: 170px;
+	@include no-desktop{
+		position: absolute;
+		right: .5em;
+		top: 2em;
+		text-align: right;
+		font-size: .8em;
+	}
+	div{
+		&>span{
+		    font-weight: bold;
+		    color: #3c97d1;
+		}
+	}
+	.user-logout{
+	    color: #e3ba50;
+	    font-weight: bold;
+	}
+}

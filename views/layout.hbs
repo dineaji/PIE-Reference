@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="Product Information Exchange">
+  <meta name="author" content="Mattel">
+  <link rel="shortcut icon" href="\./images/favicon.png" type="image/x-icon">
+
+  <link rel='stylesheet' href='\./css/theme.min.css'>
+
+  <script type="text/javascript" src='\./js/plugins.min.js'></script>
+
+</head>
+
+
+<body class="{{pageName}}">
+  <div id="page-loading"></div>
+  <div class="page-container" id="page-container">
+    {{> _mainnav}}
+    {{> _breadcrumb}}
+    {{{body}}}
+  </div>
+  <footer class="panel-footer footer">
+    <p class="text-center">©{{getCurrentYear}} Mattel. All Rights Reserved.</p>
+  </footer>
+
+  <div id="dialog-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialogModal" aria-hidden="true">
+  <div class="modal-dialog modal-">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Please enter at least one of the following search fields:
+</br>Year, Key Number, Category, Team, Source, or Key Word.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{!-- $('#dialog-modal').modal('show') --}}
+{{!-- $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+}) --}}
+  <!-- post body -->
+  <script type="text/javascript" src='\./js/mat-common.min.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+// Variables and mixins
+
+@import 'abstracts/_variables';
+@import 'abstracts/_mixins';
+
+
+//bootstrap files
+@import 'bootstrap/bootstrap';
+
+//bootstrap slick
+@import 'slick/_slick';
+
+// Base Theme Components
+@import 'base_components/_reset';
+@import 'base_components/_loader';
+@import 'base_components/_error';
+@import 'base_components/_main-nav';
+@import 'base_components/_userlogin';
+@import 'base_components/_breadcrumb';
+@import 'base_components/_footer';
+
+
+// @import login
+@import 'components/_login';
+
+// keyframes 
+@import 'components/_keyframe';
+// page styles
+@import '_layout';
+
+
+// component styles
+@import 'components/_searchwrapper';
+@import 'components/_tablelayout';
+

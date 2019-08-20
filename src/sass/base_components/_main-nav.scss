@@ -1,0 +1,165 @@
+ul.submenu-carousel:empty {
+  height: 250px;
+  background: url('#{$assetPath}/loading-icon.gif') no-repeat center center;
+  background-size: 100px 100px;
+}
+nav.navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #d2f1f5; /* Old browsers */
+    background: -moz-linear-gradient(top, #d2f1f5 0%, #f6f6f6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #d2f1f5 0%,#f6f6f6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #d2f1f5 0%,#f6f6f6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2f1f5', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */ 
+    border-bottom: 2px solid #cadee0;
+    @include no-desktop{
+      padding: 0;
+    }
+  .container{
+      position: static;
+      @include no-desktop{
+        width: 100%;
+        padding: 0;
+        position: relative;
+        text-align: center;
+      }
+      #navbar-content{
+        width:auto;
+        margin-left: 1em;
+        @include no-desktop{
+          width: 100%;
+          margin-left: 0;
+          background: #fff;
+          text-align: left;
+          border-top: 2px solid #cadee0;
+        }
+        ul.navbar-nav{
+          margin-left: 20px;
+          @include no-desktop{
+            margin: 0 1em;
+          }
+          li.nav-item{
+            margin:0 1px;
+            &[class^='brandname-'],
+            &[class*=' brandname-']{
+              &>a{
+                @include no-desktop{
+                  border-bottom: 1px solid;
+                }
+                &:before{
+                  content: "";
+                  background: transparent url('#{$assetPath}/nav-icons.png') 0 0;
+                  background-size: 200% 500%;
+                  background-position:0 0;
+                  width: 2.5em;
+                  height: 2.5em;
+                  color: #000;
+                  display: block;
+                  margin: auto;
+                  margin-bottom: 5px;
+                  @include no-desktop{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: 1em;
+                  }
+                }
+                &:hover{
+                  background-color: #3c97d1;
+                  color: #fff;
+                  &:before{
+                    background-position-x: -100%;
+                  }
+                }
+                span{
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+            }
+            a{
+              display: block;
+              color: black;
+              padding: 15px 25px;
+              text-decoration: none;
+              /* transition: all .5s; */
+              font-size: 1em;
+              @include no-desktop{
+                text-align: left;
+              }
+          }
+        }
+        .dropdown-menu{
+          @include desktop-small{
+            right: 0;
+            max-height: 350px;
+            padding: 20px 0;
+            border-bottom: 3px solid #2682cb;
+            border-top: none;
+            font-size: calc(1em - 1px);
+            ul.submenu-carousel{
+              &>li,
+              li.slick-slide{
+                float: left;
+                width: 25%;
+                clear: none;
+                a{
+                  font-family: inherit;
+                  font-size: 1em;
+                  padding: .5em 1em .5em 0;
+                  &:hover{
+                    color: #3c97d1;
+                  }
+                }
+              }
+            }
+            h3{
+              color: #d12421;
+              font-weight: bold;
+              font-size: 1.5em;
+              margin: .5em 0 1.5em;
+              position: relative;
+              &:after{
+                  content: "";
+                  position: absolute;
+                  width: 70%;
+                  bottom: -.3em;
+                  left: 1px;
+                  height: 3px;
+                  background-color: #ee4728;
+                  max-width: 65px;
+              }
+            }
+            .submenu-carousel{
+              @include desktop{
+                min-height: 200px;
+              }
+            }
+          }
+        }
+        &.show,
+        &.active{
+          &>a{
+            background-color: #3c97d1;
+            color: #fff;
+            &:before{
+              background-position-x: -100%;
+            }
+          }
+        }
+        &.brandname-fp a:before{background-position-y: -100%;}
+        &.brandname-fpfriends a:before{background-position-y: -200%;}
+        &.brandname-mattelboys a:before{background-position-y: -300%;}
+        &.brandname-mattelgirls a:before{background-position-y: -400%;}
+      }
+    }      
+  }
+}
+.navbar-brandname{
+  a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.3em;
+    color: #d12421;
+    font-weight: 400;
+  }
+}
+}
